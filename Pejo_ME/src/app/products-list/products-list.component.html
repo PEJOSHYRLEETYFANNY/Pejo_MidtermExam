@@ -1,1 +1,33 @@
-<p>products-list works!</p>
+
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Genre</th>
+        <th scope="col">Title</th>
+        <th scope="col">Author</th>
+        <th scope="col">Sypnosis</th>
+        <th scope="col">Year</th>
+        <th scope="col">Publisher</th>
+      </tr>
+    </thead>
+    <tbody>
+
+
+      <tr *ngFor="let book of listbook">
+        <th scope="row">{{book.id}}</th>
+          <td>{{book.Genre}}</td>
+          <td>{{book.Title}}</td>
+          <td>{{book.Author}}</td>
+          <td>{{book.Sypnosis}}</td>
+          <td>{{book.Year}}</td>
+          <td>{{book.Publisher}}</td>
+
+          <td>
+            <button type="button" class="btn" btn-info>Info</button>
+            <button type="button" class="btn btn-warning">Delete</button>
+          </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <router-outlet></router-outlet>

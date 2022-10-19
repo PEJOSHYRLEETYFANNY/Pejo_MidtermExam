@@ -8,6 +8,7 @@ import { NaviComponent } from './navi/navi.component';
 import { ProductsListComponent } from './products-list/products-list.component';
 import { ProductsDetailsPageComponent } from './products-details-page/products-details-page.component';
 import { SellerPageComponent } from './seller-page/seller-page.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,9 @@ import { SellerPageComponent } from './seller-page/seller-page.component';
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     AppRoutingModule
+  
   ],
   providers: [],
   bootstrap: [AppComponent]

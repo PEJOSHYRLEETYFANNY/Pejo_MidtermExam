@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+
 
 @Component({
   selector: 'app-products-details-page',
@@ -6,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./products-details-page.component.css']
 })
 export class ProductsDetailsPageComponent implements OnInit {
+book: any;
+title: any;
 
   constructor() { }
 

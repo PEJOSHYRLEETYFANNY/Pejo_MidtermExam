@@ -1,6 +1,9 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Book } from '../seller-page/book';
-import { BOOK } from '../seller-page/samp-book';
+
+
+import { ActivatedRoute} from '@angular/router';
+import { Book } from '../book';
+
 
 @Component({
   selector: 'app-products-list',
@@ -8,14 +11,15 @@ import { BOOK } from '../seller-page/samp-book';
   styleUrls: ['./products-list.component.css']
 })
 export class ProductsListComponent implements OnInit {
-@Input() Book?: Book;
+@Input() BOOK?: Book; 
 
-title="Book Detail"
-book=BOOK;
-currentBook = 'The Longest Ride'
-//@input () book: book[]
+  constructor(private route: ActivatedRoute) { }
+  @Input() listbook: Book[] = [];
 
-  constructor() { }
+  selectedBook?: Book;
+  onSelect(book: Book): void{
+    this.selectedBook = book;
+  }
 
   ngOnInit(): void {
   }
