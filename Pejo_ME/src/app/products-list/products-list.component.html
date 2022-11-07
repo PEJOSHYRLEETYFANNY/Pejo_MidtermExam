@@ -1,66 +1,23 @@
-
-<table class="table">
-    <thead>
-      <tr>
-        <th scope="col">Genre</th>
-        <th scope="col">Title</th>
-        <th scope="col">Author</th>
-        <th scope="col">Sypnosis</th>
-        <th scope="col">Year</th>
-        <th scope="col">Publisher</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let book of listbook">
-        <th scope="row">{{book.id}}</th>
-          <td>{{book.Genre}}</td>
-          <td>{{book.Title}}</td>
-          <td>{{book.Author}}</td>
-          <td>{{book.Sypnosis}}</td>
-          <td>{{book.Year}}</td>
-          <td>{{book.Publisher}}</td>
-
-          <td>
-            <button type="button" class="btn" btn-info>Info</button>
-            <button type="button" class="btn btn-warning">Delete</button>
-          </td>
-      </tr>
-    </tbody>
-  </table>
-  <div class="container">
-    <table class="table table-secondary table-striped table-bordered">
-    <thead>
-    <tr>
-   <th scope="col">Shirt ID</th>
-   <th scope="col">Shirt Brand</th>
-   <th scope="col">Shirt Type</th>
-   <th scope="col">Shirt Size</th>
-   <th scope="col">Color</th>
-   <th scope="col">Price</th>
-   <th scope="col">Country Origin</th>
-    </tr>
-    </thead>
-  <tbody>
-  <tr *ngFor="let Product of listproduct">
-  <td>{{Product.ShirtID}}</td>
-  <td>{{Product.ShirtBrand}}</td>
-  <td>{{Product.Shirttype}}</td>
-  <td>{{Product.size}}
-    
-<select name="language" id="language">
-<option value="Size">Shirt Size</option>
-<option value="Small">Small</option>
-<option value="Medium">Medium</option>
-<option value="Large">Large</option>
- </select>
-    
- </td>
- <td>{{Product.color}}</td>
- <td>{{Product.price}}</td>
- <td>{{Product.countryorigin}}</td>
- </tr>
-    </tbody>
-    </table>
+<div *ngIf="book">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-5">
+    <div class="card mb-3">
+      <h3 class="card-header">{{book.title}}</h3>
+      <div class="card-body">
+        <h5 class="card-title">{{book.author}}</h5>
+        <h6 class="card-subtitle text-muted">{{book.publisher}}</h6>
+        <p>{{book.genre}}</p>
+      </div>
+      <div class="card-body">
+        <p class="card-text">{{book.synopsis}}</p>
+      </div>
+      <div class="card-footer text-muted">
+        {{book.yearp}}
+      </div>
     </div>
-<router-outlet></router-outlet>
-    
+  
+  </div>
+  </div>
+  </div>
+  </div>
