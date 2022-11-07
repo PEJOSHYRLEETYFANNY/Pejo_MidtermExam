@@ -11,8 +11,6 @@
       </tr>
     </thead>
     <tbody>
-
-
       <tr *ngFor="let book of listbook">
         <th scope="row">{{book.id}}</th>
           <td>{{book.Genre}}</td>
@@ -29,5 +27,40 @@
       </tr>
     </tbody>
   </table>
-
-  <router-outlet></router-outlet>
+  <div class="container">
+    <table class="table table-secondary table-striped table-bordered">
+    <thead>
+    <tr>
+   <th scope="col">Shirt ID</th>
+   <th scope="col">Shirt Brand</th>
+   <th scope="col">Shirt Type</th>
+   <th scope="col">Shirt Size</th>
+   <th scope="col">Color</th>
+   <th scope="col">Price</th>
+   <th scope="col">Country Origin</th>
+    </tr>
+    </thead>
+  <tbody>
+  <tr *ngFor="let Product of listproduct">
+  <td>{{Product.ShirtID}}</td>
+  <td>{{Product.ShirtBrand}}</td>
+  <td>{{Product.Shirttype}}</td>
+  <td>{{Product.size}}
+    
+<select name="language" id="language">
+<option value="Size">Shirt Size</option>
+<option value="Small">Small</option>
+<option value="Medium">Medium</option>
+<option value="Large">Large</option>
+ </select>
+    
+ </td>
+ <td>{{Product.color}}</td>
+ <td>{{Product.price}}</td>
+ <td>{{Product.countryorigin}}</td>
+ </tr>
+    </tbody>
+    </table>
+    </div>
+<router-outlet></router-outlet>
+    
