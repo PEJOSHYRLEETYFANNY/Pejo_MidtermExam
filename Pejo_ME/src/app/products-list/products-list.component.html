@@ -1,66 +1,37 @@
+<h1>Movies</h1><br>
 
 <table class="table">
     <thead>
       <tr>
+        <th scope="col">Movie Title</th>
+        <th scope="col">Synopsis</th>
         <th scope="col">Genre</th>
-        <th scope="col">Title</th>
-        <th scope="col">Author</th>
-        <th scope="col">Sypnosis</th>
-        <th scope="col">Year</th>
-        <th scope="col">Publisher</th>
+        <th scope="col">Actions</th>
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let book of listbook">
-        <th scope="row">{{book.id}}</th>
-          <td>{{book.Genre}}</td>
-          <td>{{book.Title}}</td>
-          <td>{{book.Author}}</td>
-          <td>{{book.Sypnosis}}</td>
-          <td>{{book.Year}}</td>
-          <td>{{book.Publisher}}</td>
-
-          <td>
-            <button type="button" class="btn" btn-info>Info</button>
-            <button type="button" class="btn btn-warning">Delete</button>
-          </td>
+      
+      <tr *ngFor="let movie of movie">
+        <th scope="row"><a [title]="movie.Title">{{movie.Title}}</a></th>
+        <td>{{movie.Synopsis}}</td>
+        <td>{{movie.Genre}}</td>
+        <td><button type="button" class="btn btn-info"  [class.selected] ="movie === selectedMovie" (click)="onSelect(movie)" data-bs-target="#modal" data-bs-toggle="modal">Info</button>
       </tr>
-    </tbody>
-  </table>
-  <div class="container">
-    <table class="table table-secondary table-striped table-bordered">
-    <thead>
-    <tr>
-   <th scope="col">Shirt ID</th>
-   <th scope="col">Shirt Brand</th>
-   <th scope="col">Shirt Type</th>
-   <th scope="col">Shirt Size</th>
-   <th scope="col">Color</th>
-   <th scope="col">Price</th>
-   <th scope="col">Country Origin</th>
-    </tr>
-    </thead>
-  <tbody>
-  <tr *ngFor="let Products of ListProducts">
-  <td>{{Products.ShirtID}}</td>
-  <td>{{Products.ShirtBrand}}</td>
-  <td>{{Products.Shirttype}}</td>
-  <td>{{Products.size}}
-    
-<select name="language" id="language">
-<option value="Size">Shirt Size</option>
-<option value="Small">Small</option>
-<option value="Medium">Medium</option>
-<option value="Large">Large</option>
- </select>
-    
- </td>
- <td>{{Products.color}}</td>
- <td>{{Products.price}}</td>
- <td>{{Products.countryorigin}}</td>
- </tr>
-    </tbody>
-    </table>
-    </div>
-<router-outlet></router-outlet>
-    
+      <div class="modal fade" id="modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+          <div class="modal-content">
+              <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel"> Product Details </h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                  <app-product-details [movie]="selectedMovie"></app-product-details>
+              </div>
+             
+          </div>
+          </div>
+      </div>
+      
+  
+
+ 

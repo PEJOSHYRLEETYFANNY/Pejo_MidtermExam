@@ -1,7 +1,5 @@
-
 import { Book } from "./book";
 export const BOOK: Book [] = [
-    {
     id: 1,
     Genre: "Domestic-fiction",
     Title: "The Wish",
@@ -10,7 +8,6 @@ export const BOOK: Book [] = [
     Year: "September 28, 2021",
     Publisher: "Grand Central Publishing",
 },
-{
     id: 2,
     Genre: "Romance Level",
     Title: "The best of me",

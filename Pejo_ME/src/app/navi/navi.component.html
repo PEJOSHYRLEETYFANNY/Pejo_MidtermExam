@@ -1,41 +1,35 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-    <img src="../../assets/st.jpeg" alt="" width="100" height="100">
-    <div class="container-fluid">
-      <a class="navbar-brand" routerLink="#">Shyrlee Tyfanny Pejo</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarColor01">
-        <ul class="navbar-nav me-auto">
-          <li class="nav-item">
-            <a class="nav-link active" href="#">Movie
-              <span class="visually-hidden">(current)</span>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" routerLink="#">Clothing</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" routerLink="#">Grocery Items</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">About</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Book</a>
-            <div class="dropdown-menu">
-              <a class="dropdown-item" routerLink="#">hhfghbkj</a>
-              <a class="dropdown-item" routerLink="#"></a>
-              <a class="dropdown-item" routerLink="#"></a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" routerLink="#"></a>
-            </div>
-          </li>
-        </ul>
-        <form class="d-flex">
-          <input class="form-control me-sm-2" type="text" placeholder="Search">
-          <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
-        </form>
-      </div>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+<a class="navbar-brand" href="#"><img src="../../assets/favicon.ico" alt=""></a>
+<ul class="navbar-nav ml-auto">
+    <li class="nav-item">
+        <a class="nav-link " data-bs-toggle="modal" href="#" data-bs-target="#loginmodal">
+            Login
+         </a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" routerLink="register" routerLinkActive="active-link">Register</a>
+      </li>
+</ul>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link" routerLink=""  routerLinkActive="active-link" [routerLinkActiveOptions]="{exact:true}" >Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="product-list" routerLinkActive="active-link">Product-List</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="product-details" routerLinkActive="active-link">Product-Details</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="seller-page" routerLinkActive="active-link">Seller-Page</a>
+        </li>
+        
+      </ul>
     </div>
-  </nav>
+  </div>
+</nav>

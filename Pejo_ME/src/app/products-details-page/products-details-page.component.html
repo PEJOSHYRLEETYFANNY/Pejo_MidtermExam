@@ -1,23 +1,29 @@
-<div *ngIf="book">
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-5">
-    <div class="card mb-3">
-      <h3 class="card-header">{{book.title}}</h3>
-      <div class="card-body">
-        <h5 class="card-title">{{book.author}}</h5>
-        <h6 class="card-subtitle text-muted">{{book.publisher}}</h6>
-        <p>{{book.genre}}</p>
+<div *ngIf="movie">
+  <div class="mb-3">
+      <p>ID: {{movie.id}}</p>
+  </div>
+  <label for="code" class="form-label">Movie Title:</label>
+  <input class="form-control" id="title" [value] ="movie.Title" readonly><br>
+  <div class="row">
+      <div class="col-md-6 mb-3">
+        <label for="code" class="form-label">Main Actor:</label>
+        <input class="form-control" id="actor" [value] ="movie.MainActor" readonly>
       </div>
-      <div class="card-body">
-        <p class="card-text">{{book.synopsis}}</p>
+      <div class="col-md-6 mb-3">
+          <label for="desc" class="form-label">Genre:</label>
+          <input class="form-control" id="genre" [value] ="movie.Genre" readonly>
       </div>
-      <div class="card-footer text-muted">
-        {{book.yearp}}
+  </div>
+  <div class="row">
+      <div class="col-md-6 mb-3">
+        <label for="code" class="form-label">Director:</label>
+        <input class="form-control" id="actor" [value] ="movie.Director" readonly>
       </div>
-    </div>
-  
+      <div class="col-md-6 mb-3">
+          <label for="desc" class="form-label">Release Date:</label>
+          <input class="form-control" id="genre" [value] ="movie.ReleaseDate" readonly>
+      </div>
   </div>
-  </div>
-  </div>
-  </div>
+  <label for="code" class="form-label">Synopsis:</label>
+  <textarea class="form-control" id="synopsis" [value] ="movie.Synopsis" readonly></textarea><br>
+</div>

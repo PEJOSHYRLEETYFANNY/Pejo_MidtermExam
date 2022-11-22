@@ -1,22 +1,22 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { NaviComponent } from './navi/navi.component';
-import { ProductsDetailsPageComponent } from './products-details-page/products-details-page.component';
-import { ProductsListComponent } from './products-list/products-list.component';
+import { NavigationComponent } from './navigation/navigation.component';
+import { ProductListComponent } from './product-list/product-list.component';
+import { ProductDetailsComponent } from './product-details/product-details.component';
 import { SellerPageComponent } from './seller-page/seller-page.component';
+import { RegisterComponent } from './register/register.component';
 const routes: Routes = [];
 
 @NgModule({
   imports: [RouterModule.forRoot(
     [
-      {path: 'app-navi', component: NaviComponent},
-      {path: 'products-details-page', component: ProductsDetailsPageComponent},
-      {path: 'products-list', component: ProductsListComponent},
-      {path: 'seller-page', component: SellerPageComponent},
+      {path:'navigation', component: NavigationComponent},
+      {path:'product-list', component: ProductListComponent},
+      {path:'product-details', component: ProductDetailsComponent},
+      {path:'seller-page', component: SellerPageComponent},
+      {path:'register', component: RegisterComponent}
     ]
   )],
-  
   exports: [RouterModule]
-
 })
 export class AppRoutingModule { }
