@@ -1,5 +1,4 @@
 <h1>Books</h1><br>
-
 <table class="table">
     <thead>
       <tr>
@@ -13,11 +12,11 @@
     </thead>
     <tbody>
       
-      <tr *ngFor="let Books of books">
-        <th scope="row"><a [title]="books.Title">{{movie.Title}}</a></th>
+      <tr *ngFor="let BOOKS of books">
+        <th scope="row"><a [title]="books.Title">{{books.Title}}</a></th>
         <td>{{books.Synopsis}}</td>
         <td>{{books.Genre}}</td>
-        <td><button type="button" class="btn btn-info"  [class.selected] ="movie === selectedMovie" (click)="onSelect(movie)" data-bs-target="#modal" data-bs-toggle="modal">Info</button>
+        <td><button type="button" class="btn btn-info"  [class.selected] ="books === selectedBooks" (click)="onSelect(books)" data-bs-target="#modal" data-bs-toggle="modal">Info</button>
       </tr>
       <div class="modal fade" id="modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
           <div class="modal-dialog">

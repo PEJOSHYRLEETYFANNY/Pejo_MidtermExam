@@ -1,23 +1,21 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { ActivatedRoute} from '@angular/router';
-import { Products } from '../products-list';
-
+import { Component, OnInit } from '@angular/core';
+import {Books} from '../books'
+import {BOOKS} from '../samp-books'
 
 @Component({
-  selector: 'app-products-listcomponent',
-  templateUrl: './products-list. component.html',
-  styleUrls: ['./products-listcomponent.css']
+  selector: 'app-product-list',
+  templateUrl: './product-list.component.html',
+  styleUrls: ['./product-list.component.css']
 })
-export class ProductsListComponent implements OnInit {
-@Input() PRODUCTS?: ProductsListComponent; 
-
-  constructor(private route: ActivatedRoute) { }
-  @Input() listProducts: ProductsListComponent[] = [];
-
-  selectedProducts?: ProductsListComponent;
-  onSelect(products: ProductsListComponent): void{
-    this.selectedProducts = products;
+export class ProductListComponent implements OnInit {
+  books = BOOKS;
+  title="Product Info"
+  botitle="Details"
+  selectedBooks?: Books;
+  onSelect(books: Books): void{
+    this.selectedBooks = books;
   }
+  constructor() { }
 
   ngOnInit(): void {
   }
